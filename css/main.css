@@ -347,7 +347,7 @@ h5 {
     line-height: 45px;
     letter-spacing: 0.025em;
     text-align: center;
-/*    width: 60%;*/
+    width: 100%;
     margin: auto;
     margin-top: 10px;
 }
@@ -606,4 +606,102 @@ h5 {
     letter-spacing: 0;
     text-align: center;
     margin-top: 75px;
+}
+
+@media screen and (max-width : 1199px) {
+    .navbar-collapse.collapse{
+        vertical-align: top;
+        padding-left: 0;
+        padding-right: 0;
+        float: right;
+    }
+    .navbar-brand {
+        height: auto;
+        display: block;
+        width: 100%;    
+        margin-left: 0;
+    }
+    .nav-link{
+        margin-left: 45px;
+    }
+    .logo{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .form-text p{
+        width: 85%;
+        margin: auto;
+    }
+    .import{
+        width: 75%;
+    }
+    .import-2{
+        width: 83%;
+    }   
+    .banner-text .banner-caption {
+        width: 92%;
+    }
+    .banner-text p{
+        text-align: none;
+    }
+    .feature-text p{
+        width: 90%;
+    }
+    .feature-content p{
+        width: 95%;
+    }
+    .carousel-indicators{
+        width: auto;
+        left: 165px;
+        margin-left: 0;
+        right: 0;
+        z-index: 0;
+    }
+    .carousel-control-next{
+        right: 7%;
+    }
+    .carousel-control-prev{
+        left: 10%;
+    }
+    .input{
+        padding-left: 50px;
+        padding-right: 30px;
+    }
+    .social{
+        margin-top: 0;
+        padding-left: 0;
+    }
+    .social-2{
+        margin-top: 0;
+        padding-left: 28px;
+    }
+}
+
+@media screen and (max-width : 991px) {
+    .carousel-control-prev{
+        left: 16%;
+        bottom: -89px;
+    }
+    .carousel-control-next{
+        right: 10%;
+        bottom: -89px;
+    }
+    .carousel-indicators .active{
+        width: 75px;
+    }
+    .carousel-indicators li{
+        width: 75px;
+    }
+    .team-photo{
+        width: 60px;
+        height: 60px;
+    }
+    .member h4{
+        margin-left: 5px;
+        font-size: 16px;
+    }
+    .member p{
+        font-size: 16px;
+        margin: 5px;
+    }
 }
