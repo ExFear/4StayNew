@@ -70,6 +70,12 @@
        url('../fonts/myriadpro.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+.form-control:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+
 /*Teks*/
 
 p {
@@ -114,6 +120,10 @@ h5 {
     padding: 0;
 }
 
+.navbar-light .navbar-toggler{
+    border: 0;
+}
+
 .nav-link {
     font-family: "Lato", Fallback sans-serif;
     font-size: 14px;
@@ -131,12 +141,36 @@ h5 {
     padding: 10px 15px;
 }
 
-.form-inline .form-control{
+.nav-input-group .form-control{
+    display: inline-block;
+    background: #f8f8f8;
+    border-color: #f8f8f8;
+    height: auto;
+    width: 300px;
+    margin-left: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.input-group .form-control{
     background: #f8f8f8;
     border-color: #f8f8f8;
     height: auto;
     width: 350px;
-    margin-top: 5px;
+}
+
+.btn-search-nav{
+    background: #f8f8f8;
+    border: 0;
+    height: auto;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    width: 45px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    top: -1px;
+    left: -7px;
+    position: relative;
 }
 
 .btn-outline-success{
@@ -149,7 +183,7 @@ h5 {
     height: 40px;
     border-color: #ed0d7d;
     margin-left: 80px;
-    margin-right: 65px;
+    margin-right: 95px;
 }
 
 .btn-outline-success:hover{
@@ -330,6 +364,10 @@ h5 {
     margin: auto;
 }
 
+.carousel{
+    width: 100%;
+}
+
 .carousel-caption {
     position: relative;
     width: 63.66667%;
@@ -413,12 +451,12 @@ h5 {
 }
 
 .quote-left{
-    left: -89px;
+    left: -80px;
     top: 0;
 }
 
 .quote-right{
-    right: -89px;
+    right: -80px;
     bottom: 0;
 }
 
@@ -612,28 +650,36 @@ h5 {
     .navbar-collapse.collapse{
         vertical-align: top;
         padding-left: 0;
-        padding-right: 0;
+        padding-right: 15px;;
         float: right;
     }
     .navbar-brand {
         height: auto;
         display: block;
-        width: 100%;    
+        width: 15%;    
         margin-left: 0;
     }
     .nav-link{
         margin-left: 45px;
     }
+    .nav-input-group .form-control{
+        display: inline-block;
+        width: 250px;
+    }
     .logo{
-        margin-left: auto;
+        margin-left: 35px;;
         margin-right: auto;
+    }
+    .btn-outline-success{
+        margin-left: 25px;
+        margin-right: 50px;
     }
     .form-text p{
         width: 85%;
         margin: auto;
     }
     .import{
-        width: 75%;
+        width: 90%;
     }
     .import-2{
         width: 83%;
@@ -678,6 +724,60 @@ h5 {
 }
 
 @media screen and (max-width : 991px) {
+    .navbar-brand{
+        display: inline-block;
+        width: auto;
+    }
+    .navbar-light .navbar-toggler-icon{
+        padding-right: 100px;
+    }
+    .navbar-light .navbar-toggler{
+        display: none;
+    }
+    .navbar-collapse.collapse{
+        display: inline-block;
+        flex-basis: 0;
+        text-align: right;
+        padding-right: 10px;
+    }
+    .navbar-nav{
+        display: inline-block;
+    }
+    .nav-link{
+        display: inline-block;
+        margin-left: 25px;
+    }
+    .navbar-nav li{
+        display: inline-block;
+    }
+    .nav-input-group{
+        width: auto;
+        display: inline-block;
+    }
+    .nav-input-group .form-control{
+        display: inline-block;
+        width: auto;
+    }
+    .btn-outline-success{
+/*        padding-right: 15px;*/
+        margin-right: 0;
+    }
+    .btn-search-nav{
+        display: inline-block;
+    }
+    .logo{
+        margin-left: 20px;
+    }
+    .import{
+        width: 100%;
+    }
+    .banner-text .banner-caption{
+        width: 105%;
+    }
+    .form-text p{
+        width: 100%;
+        margin-top: 100px;
+    }
     .carousel-control-prev{
         left: 16%;
         bottom: -89px;
@@ -686,22 +786,38 @@ h5 {
         right: 10%;
         bottom: -89px;
     }
+    .carousel-indicators{
+        width: 45%;
+    }
     .carousel-indicators .active{
         width: 75px;
     }
     .carousel-indicators li{
         width: 75px;
     }
+    .carousel-indicators .active, 
+    .carousel-indicators li{
+        margin-left: 60px;
+    }
     .team-photo{
-        width: 60px;
-        height: 60px;
+        width: 131px;
+        height: 131px;
     }
     .member h4{
-        margin-left: 5px;
+        margin-left: 38px;
         font-size: 16px;
     }
     .member p{
         font-size: 16px;
-        margin: 5px;
+        margin-left: 32px;
+    }
+}
+
+@media screen and (max-width : 767px){
+     .navbar-light .navbar-toggler{
+        display: block;
+    }
+    .navbar-collapse.collapse{
+        display: none;
     }
 }
